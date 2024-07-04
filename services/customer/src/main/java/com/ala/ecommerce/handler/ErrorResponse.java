@@ -1,2 +1,7 @@
-package com.ala.ecommerce.handler;public class ErrorResponse {
+package com.ala.ecommerce.handler;
+
+import java.util.Map;
+
+public record ErrorResponse (Map<String, String> errors){
+
 }
