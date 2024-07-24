@@ -1,2 +1,13 @@
-package com.ala.ecomerce.config;public class restTemplateConfig {
+package com.ala.ecomerce.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+@Configuration
+public class restTemplateConfig {
+    @Bean
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
+    }
 }
