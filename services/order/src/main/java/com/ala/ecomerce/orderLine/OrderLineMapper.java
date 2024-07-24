@@ -1,2 +1,23 @@
-package com.ala.ecomerce.orderLine;public class OrderLineMapper {
+package com.ala.ecomerce.orderLine;
+
+import com.ala.ecomerce.order.Order;
+import org.springframework.stereotype.Service;
+
+@Service
+public class OrderLineMapper {
+    public OrderLine toOrderLine(OrderLineRequest orderLineRequest) {
+        return OrderLine.builder()
+                .id(orderLineRequest.id())
+                .quantity(orderLineRequest.quantity())
+                .order(Order.builder().id(orderLineRequest.orderId()).build())
+                .productId(orderLineRequest.productId())
+                .build();
+    }
+
+    public OrderLineRespons fromOrderLine(OrderLine orderLine) {
+        return new OrderLineRespons(
+                orderLine.getId(),
+                orderLine.getQuantity()
+        );
+    }
 }

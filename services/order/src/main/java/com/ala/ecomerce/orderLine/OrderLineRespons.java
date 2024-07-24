@@ -1,2 +1,7 @@
-package com.ala.ecomerce.orderLine;public record OrderLineRespons() {
+package com.ala.ecomerce.orderLine;
+
+public record OrderLineRespons(
+        Integer id,
+        double quantity
+) {
 }
