@@ -1,7 +1,7 @@
-package com.ala.ecommerce.handler;
+package com.ala.ecomerce.Handler;
 
 import java.util.Map;
 
-public record ErrorResponse (Map<String, String> errors){
+public record ProductErrorResponse(Map<String, String> errors){
 
 }
