@@ -1,14 +1,13 @@
 package com.ala.ecommerce.notification;
 
-import com.ala.ecommerce.payment.PaymentMethode;
-import org.apache.kafka.common.protocol.types.Field;
+import com.ala.ecommerce.payment.PaymentMethod;
 
 import java.math.BigDecimal;
 
-public record PaymentNotificationTemplate(
+public record PaymentNotificationRequest(
         String orderReference,
         BigDecimal amount,
-        PaymentMethode paymentMethode,
+        PaymentMethod paymentMethod,
         String customerName,
         String customerLastName,
         String customerEmail
