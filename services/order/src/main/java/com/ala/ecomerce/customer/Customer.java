@@ -1,6 +1,6 @@
 package com.ala.ecomerce.customer;
 
-public record CustomerResponse(
+public record Customer(
         String id,
         String firstName,
         String lastName,

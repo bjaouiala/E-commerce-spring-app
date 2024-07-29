@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .email-header, .email-footer {
+            text-align: center;
+            color: #888;
+        }
+        .email-body {
+            margin-top: 20px;
+        }
+        .product-list {
+            margin: 20px 0;
+        }
+        .product-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .product-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <div class="email-header">
+        <h1>Order Confirmation</h1>
+    </div>
+    <div class="email-body">
+        <p>Dear <span th:text="${customerName}">Customer</span>,</p>
+        <p>Thank you for your order. Here are the details of your purchase:</p>
+        <ul class="product-list">
+            <li class="product-item" th:each="product : ${products}">
+                <span th:text="${product.name}">Product Name</span> -
+                <span th:text="${product.price}">Product Price</span>
+            </li>
+        </ul>
+        <p><strong>Total Amount:</strong> <span th:text="${totalAmount}">0.00</span></p>
+        <p><strong>Order Reference:</strong> <span th:text="${orderReference}">REF123456</span></p>
+        <p>If you have any questions, please contact our support team.</p>
+    </div>
+    <div class="email-footer">
+        <p>Thank you for shopping with us!</p>
+    </div>
+</div>
+</body>
+</html>
