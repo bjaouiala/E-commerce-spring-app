@@ -1,4 +1,6 @@
-package com.ala.ecommerce.kafka;
+package com.ala.ecommerce.kafka.order;
+
+import com.ala.ecommerce.kafka.payment.PaymentMethod;
 
 import java.math.BigDecimal;
 import java.util.List;

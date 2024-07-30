@@ -1,2 +1,9 @@
-package com.ala.ecommerce.kafka.order;public record Customer() {
+package com.ala.ecommerce.kafka.order;
+
+public record Customer( String id,
+                        String firstName,
+
+                        String lastName,
+
+                        String email) {
 }
