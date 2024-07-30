@@ -1,4 +1,14 @@
-package com.ala.ecommerce.kafka;
+package com.ala.ecommerce.kafka.payment;
 
-public record PaymentConfirmation() {
+import java.math.BigDecimal;
+
+public record PaymentConfirmation(
+        String orderReference,
+        BigDecimal amount,
+        PaymentMethod paymentMethod,
+        String customerName,
+        String customerLastName,
+        String customerEmail
+) {
+
 }

@@ -1,4 +1,4 @@
-package com.ala.ecommerce.kafka.order;
+package com.ala.ecommerce.kafka.payment;
 
 public enum PaymentMethod {
     PAYPAL,
