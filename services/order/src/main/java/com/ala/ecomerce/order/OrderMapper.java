@@ -8,16 +8,16 @@ public class OrderMapper {
         return Order.builder()
                 .id(request.id())
                 .customerId(request.customerId())
-                .totalAmount(request.amount())
-                .referece(request.reference())
+                .amount(request.amount())
+                .reference(request.reference())
                 .paymentMethod(request.paymentMethod())
                 .build();
     }
 
     public OrderResponse fromOrder(Order order) {
         return new OrderResponse(order.getId(),
-                order.getReferece(),
-                order.getTotalAmount(),
+                order.getReference(),
+                order.getAmount(),
                 order.getPaymentMethod(),
                 order.getCustomerId());
     }

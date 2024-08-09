@@ -24,8 +24,8 @@ public class Order {
     @Id
     @GeneratedValue
     private Integer id;
-    private String referece;
-    private BigDecimal totalAmount;
+    private String reference;
+    private BigDecimal amount;
     @Enumerated(STRING)
     private PaymentMethod paymentMethod;
     private String customerId;

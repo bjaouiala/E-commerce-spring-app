@@ -42,9 +42,10 @@
         <p>Thank you for your order. Here are the details of your purchase:</p>
         <ul class="product-list">
             <li class="product-item" th:each="product : ${products}">
-                <span th:text="${product.name}">Product Name</span> -
-                <span th:text="${product.price}">Product Price</span>
+                <span th:text="${product.name}">Product Name</span>
+                <span th:text="${product.amount}">Product Price</span>
             </li>
+
         </ul>
         <p><strong>Total Amount:</strong> <span th:text="${totalAmount}">0.00</span></p>
         <p><strong>Order Reference:</strong> <span th:text="${orderReference}">REF123456</span></p>
